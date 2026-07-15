@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thank You | Apex Fitness</title>
+    <style>
+        body { 
+            /* Wahi background image aur dark overlay */
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/register-bg.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed;
+            height: 100vh; 
+            margin: 0;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            color: white; 
+            font-family: sans-serif;
+        }
+        .msg-box { 
+            background: rgba(26, 26, 26, 0.9); 
+            border: 2px solid #ff5722; 
+            padding: 50px; 
+            border-radius: 15px; 
+            text-align: center; 
+            max-width: 400px; 
+        }
+        h1 { color: #ff5722; margin-top: 0; }
+        
+        /* Professional Loading Spinner */
+        .loader { 
+            border: 4px solid #333; 
+            border-top: 4px solid #ff5722; 
+            border-radius: 50%; 
+            width: 30px; 
+            height: 30px; 
+            animation: spin 1s linear infinite; 
+            margin: 20px auto; 
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+    <script>
+        // Automatic redirection to dashboard after 3 seconds
+        setTimeout(function(){
+            window.location.href = 'dashboard.html';
+        }, 3000); 
+    </script>
+</head>
+<body>
+
+    <div class="msg-box">
+        <h1>Thank You!</h1>
+        <p>Aapki details receive ho gayi hain. Redirecting to your dashboard...</p>
+        <!-- Yeh spinner user ko process ka feedback dega -->
+        <div class="loader"></div> 
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Registration | Apex Fitness</title>
+    <style>
+        body { 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/register-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .reg-form { 
+            background: rgba(26, 26, 26, 0.9);
+            padding: 40px; 
+            border-radius: 15px; 
+            width: 90%; 
+            max-width: 400px; 
+            border: 2px solid #ff5722;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+
+        .reg-form h2 { color: #ff5722; margin-bottom: 25px; }
+
+        .reg-form input { 
+            width: 100%; 
+            padding: 12px; 
+            margin-bottom: 20px; 
+            background: #333;
+            border: 1px solid #444; 
+            color: white; 
+            border-radius: 5px;
+            box-sizing: border-box; 
+        }
+
+        .reg-form button { 
+            width: 100%; 
+            padding: 12px; 
+            background: #ff5722; 
+            border: none; 
+            color: white; 
+            font-weight: bold; 
+            cursor: pointer; 
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .reg-form button:hover { background: #e64a19; }
+    </style>
+</head>
+<body>
+
+    <div class="reg-form">
+        <h2>Register Now</h2>
+        
+        <!-- Form with ID for JavaScript -->
+        <form id="gymForm" action="https://formspree.io/f/xnjejjbv" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <button type="submit" id="submitBtn">SUBMIT DETAILS</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("gymForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Default submission roko
+            
+            const btn = document.getElementById("submitBtn");
+            btn.innerText = "Submitting...";
+            btn.disabled = true;
+
+            fetch(event.target.action, {
+                method: 'POST',
+                body: new FormData(event.target),
+                headers: { 'Accept': 'application/json' }
+            }).then(() => {
+                // 3 second wait aur phir redirection
+                setTimeout(function() {
+                    window.location.href = "thankyou.html";
+                }, 3000);
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Elite Trainers | Apex Fitness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            margin: 0; padding: 40px; font-family: 'Oswald', sans-serif;
+            /* Background image integration */
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/trainers.png');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            color: #ffffff;
+        }
+        
+        h1 { text-align: center; color: #ff5722; font-size: 3rem; margin-bottom: 50px; text-transform: uppercase; }
+        
+        .trainer-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+        
+        .trainer-card { 
+            background: rgba(38, 38, 38, 0.6); /* Glassmorphism background */
+            border-top: 4px solid #ff5722; border-radius: 15px;
+            width: 300px; padding: 25px; text-align: center; 
+            transition: 0.4s; backdrop-filter: blur(10px);
+        }
+        
+        .trainer-card:hover { transform: translateY(-10px); background: rgba(51, 51, 51, 0.8); }
+        
+        .trainer-card img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 3px solid #ff5722; }
+        .trainer-card h3 { margin: 10px 0; color: #ff5722; font-size: 1.5rem; }
+        .trainer-card p { color: #cccccc; font-size: 0.95rem; margin-bottom: 20px; }
+        
+        .book-btn { 
+            display: inline-block; padding: 12px 25px; background: #ff5722; 
+            color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; 
+        }
+        .book-btn:hover { background: #e64a19; }
+
+        .back-container { text-align: center; margin-top: 50px; }
+        .back-btn { color: #ff5722; text-decoration: none; font-size: 1.2rem; border: 1px solid #ff5722; padding: 10px 20px; border-radius: 5px; }
+        .back-btn:hover { background: #ff5722; color: white; }
+    </style>
+</head>
+<body>
+
+    <h1>Meet Our Elite Trainers</h1>
+
+    <div class="trainer-container">
+        <!-- Trainer 1 -->
+        <div class="trainer-card">
+            <img src="images/aashis-back.png" alt="Aashis Bhati">
+            <h3>Aashis Bhati</h3>
+            <p>Expert in Bodybuilding & Hypertrophy. 10 years of experience.</p>
+            <a href="https://wa.me/91XXXXXXXXXX?text=I want to book a session with Aashis" class="book-btn">Book Session</a>
+        </div>
+
+        <!-- Trainer 2 -->
+        <div class="trainer-card">
+            <img src="images/mayank-side.png" alt="Mayank">
+            <h3>Mayank</h3>
+            <p>Yoga Specialist & Mental Wellness Coach. Certified Instructor.</p>
+            <a href="https://wa.me/91XXXXXXXXXX?text=I want to book a session with Mayank" class="book-btn">Book Session</a>
+        </div>
+
+        <!-- Trainer 3 -->
+        <div class="trainer-card">
+            <img src="images/sumit-front.png" alt="Sumit Singh">
+            <h3>Sumit Singh</h3>
+            <p>Cardio Blast & High-Intensity Interval Training (HIIT) Expert.</p>
+            <a href="https://wa.me/91XXXXXXXXXX?text=I want to book a session with Sumit" class="book-btn">Book Session</a>
+        </div>
+    </div>
+
+    <div class="back-container">
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
+
+</body>
+</html>

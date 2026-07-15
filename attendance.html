@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Attendance | Apex Fitness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            margin: 0; padding: 40px; font-family: 'Poppins', sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('images/attendace.png');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            color: #fff;
+        }
+        .header-section { display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: auto; }
+        #live-clock { font-size: 1.5rem; color: #d4af37; font-weight: 600; }
+        
+        .attendance-container { 
+            max-width: 900px; margin: 30px auto; background: rgba(0, 0, 0, 0.6); 
+            padding: 30px; border-radius: 20px; border: 1px solid #d4af37; backdrop-filter: blur(10px);
+        }
+        
+        .member-profile { 
+            background: rgba(212, 175, 55, 0.1); padding: 20px; border-radius: 15px; 
+            margin-bottom: 25px; border-left: 5px solid #d4af37;
+        }
+        
+        table { width: 100%; border-collapse: collapse; }
+        th { color: #d4af37; text-align: left; padding: 15px; border-bottom: 2px solid #d4af37; }
+        td { padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        
+        .btn { display: block; width: 220px; margin: 30px auto; text-align: center; color: #000; background: #d4af37; padding: 15px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+        .btn:hover { background: #fff; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <div class="header-section">
+        <h1>My Attendance</h1>
+        <div id="live-clock">00:00:00</div>
+    </div>
+    
+    <div class="attendance-container">
+        <!-- Personal Information Section -->
+        <div class="member-profile">
+            <h2 style="margin-top:0; color:#d4af37;">Welcome, Sumit </h2>
+            <p><strong>Member ID:</strong> AF-2026-9901</p>
+            <p><strong>Joining Date:</strong> 01 july 2026</p>
+            <p><strong>Total Days Attended:</strong> 15 Days</p>
+        </div>
+
+        <table>
+            <tr><th>Date</th><th>Check-In Time</th><th>Status</th></tr>
+            <tr><td>15 July 2026</td><td>07:30 AM</td><td style="color:#4caf50;">Present</td></tr>
+            <tr><td>14 July 2026</td><td>06:45 AM</td><td style="color:#4caf50;">Present</td></tr>
+            <tr><td>13 July 2026</td><td>07:15 AM</td><td style="color:#4caf50;">Present</td></tr>
+        </table>
+    </div>
+
+    <a href="dashboard.html" class="btn">Back to Dashboard</a>
+
+    <script>
+        setInterval(() => {
+            document.getElementById('live-clock').innerText = new Date().toLocaleTimeString();
+        }, 1000);
+    </script>
+</body>
+</html>

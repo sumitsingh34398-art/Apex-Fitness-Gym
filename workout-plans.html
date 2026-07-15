@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workout Plans | Apex Fitness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            margin: 0; 
+            padding: 40px; 
+            font-family: 'Poppins', sans-serif;
+            /* Yahan image ka naam update kar diya gaya hai */
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/1000132256.png');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+        
+        h1 { text-align: center; color: #d4af37; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 50px; }
+        
+        .workout-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 25px; 
+            max-width: 1300px; 
+            margin: auto; 
+        }
+        
+        .workout-card { 
+            background: rgba(0, 0, 0, 0.6); /* Glass effect ke liye thoda dark background */
+            padding: 25px; 
+            border-radius: 20px; 
+            border: 1px solid rgba(212, 175, 55, 0.3); 
+            backdrop-filter: blur(10px);
+            transition: 0.4s;
+        }
+        
+        .workout-card:hover { 
+            background: rgba(212, 175, 55, 0.1); 
+            border-color: #d4af37; 
+            transform: translateY(-5px); 
+        }
+        
+        .workout-card h3 { color: #d4af37; margin-top: 0; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+        .exercise-list { list-style: none; padding: 0; color: #ddd; }
+        .exercise-list li { padding: 6px 0; display: flex; justify-content: space-between; }
+        .reps { color: #d4af37; font-weight: 600; }
+        
+        .btn { 
+            display: block; width: 220px; margin: 50px auto; text-align: center; color: #000; 
+            background: #d4af37; padding: 15px; border-radius: 50px; text-decoration: none; 
+            font-weight: 600; transition: 0.3s; 
+        }
+        .btn:hover { background: #fff; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <h1>Weekly Workout Schedule</h1>
+    
+    <div class="workout-grid">
+        <!-- Monday -->
+        <div class="workout-card">
+            <h3>Monday: Chest & Triceps</h3>
+            <ul class="exercise-list">
+                <li>Bench Press <span class="reps">3 x 10</span></li>
+                <li>Incline Dumbbell Press <span class="reps">3 x 12</span></li>
+                <li>Tricep Pushdowns <span class="reps">3 x 15</span></li>
+            </ul>
+        </div>
+
+        <!-- Tuesday -->
+        <div class="workout-card">
+            <h3>Tuesday: Back & Biceps</h3>
+            <ul class="exercise-list">
+                <li>Lat Pulldowns <span class="reps">3 x 12</span></li>
+                <li>Seated Rows <span class="reps">3 x 10</span></li>
+                <li>Barbell Curls <span class="reps">3 x 12</span></li>
+            </ul>
+        </div>
+
+        <!-- Wednesday -->
+        <div class="workout-card">
+            <h3>Wednesday: Legs & Shoulders</h3>
+            <ul class="exercise-list">
+                <li>Squats <span class="reps">3 x 10</span></li>
+                <li>Leg Press <span class="reps">3 x 12</span></li>
+                <li>Shoulder Press <span class="reps">3 x 10</span></li>
+            </ul>
+        </div>
+
+        <!-- Thursday -->
+        <div class="workout-card">
+            <h3>Thursday: Cardio</h3>
+            <ul class="exercise-list">
+                <li>Jogging <span class="reps">30 Min</span></li>
+                <li>Abs Crunches <span class="reps">3 x 20</span></li>
+            </ul>
+        </div>
+
+        <!-- Friday -->
+        <div class="workout-card">
+            <h3>Friday: Upper Body</h3>
+            <ul class="exercise-list">
+                <li>Dumbbell Press <span class="reps">3 x 12</span></li>
+                <li>Cable Rows <span class="reps">3 x 10</span></li>
+                <li>Hammer Curls <span class="reps">3 x 12</span></li>
+            </ul>
+        </div>
+
+        <!-- Saturday -->
+        <div class="workout-card">
+            <h3>Saturday: Legs</h3>
+            <ul class="exercise-list">
+                <li>Lunges <span class="reps">3 x 12</span></li>
+                <li>Leg Extensions <span class="reps">3 x 15</span></li>
+                <li>Plank <span class="reps">3 x 60s</span></li>
+            </ul>
+        </div>
+
+        <!-- Sunday -->
+        <div class="workout-card">
+            <h3>Sunday: Recovery</h3>
+            <ul class="exercise-list">
+                <li>Full Rest</li>
+                <li>Muscle Repair</li>
+            </ul>
+        </div>
+    </div>
+
+    <a href="dashboard.html" class="btn">Back to Dashboard</a>
+
+</body>
+</html>

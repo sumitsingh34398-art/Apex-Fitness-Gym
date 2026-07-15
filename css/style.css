@@ -1,0 +1,146 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+    min-height: 100vh;
+}
+
+/* Navbar layout */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #0d0d0d;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff5722;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+.join-btn {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 8px 20px;         /* Padding kam ki hai taaki ye chota aur neat lage */
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;        /* Corner radius thoda badha diya */
+    transition: 0.3s;
+    margin-left: 20px;         /* Baaki links se thoda door karne ke liye */
+}
+
+.join-btn:hover {
+    background-color: #e64a19;
+    transform: translateY(-2px); /* Halka sa upar uthega click karne ke liye */
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.subtitle { color: #ff5722; letter-spacing: 3px; }
+
+.hero h1 {
+    font-size: 80px;
+    color: #ff5722;
+    margin: 10px 0;
+}
+
+.tagline { font-size: 30px; }
+
+.hero-buttons { margin-top: 20px; }
+
+.btn-primary {
+    background: #ff5722;
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #ff5722;
+    padding: 15px 30px;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.join-link {
+    text-decoration: none; /* Link ki underline hatane ke liye */
+}
+
+/* Button ki styling wahi rahegi jo humne pehle set ki thi */
+.join-btn {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer; /* Ab ye pointer dikhayega */
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.membership-page {
+    /* Pehle url mein images/gym-background.jpg likhein */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/gym-background.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+}
+.learn-more-btn {
+    padding: 15px 30px;
+    background: transparent; /* Transparent button */
+    border: 2px solid #ff5722; /* Sirf border dikhega */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+.learn-more-btn:hover {
+    background: #ff5722; /* Hover karne par orange ho jayega */
+    color: white;
+}
+.gallery-item img { 
+    width: 100%; 
+    height: 250px; /* Isse kam na karein */
+    object-fit: cover; /* Image ko box mein perfect fit karne ke liye */
+    display: block; 
+}

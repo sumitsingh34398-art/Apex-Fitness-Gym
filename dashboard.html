@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apex Fitness Dashboard</title>
+    <style>
+        /* CSS Reset & Body */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/manager-office.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar Styling */
+        .sidebar { 
+            width: 260px; 
+            background: rgba(0, 0, 0, 0.7); 
+            backdrop-filter: blur(15px); 
+            border-right: 1px solid #333; 
+            padding: 30px; 
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar h2 { color: #d4af37; margin-bottom: 50px; font-size: 1.8rem; letter-spacing: 2px; }
+        
+        /* Updated Clickable Menu Items */
+        .menu-item { 
+            display: block; 
+            text-decoration: none; 
+            padding: 18px 0; 
+            color: #ccc; 
+            font-size: 1.1rem; 
+            border-bottom: 1px solid rgba(255,255,255,0.05); 
+            transition: 0.3s; 
+        }
+        .menu-item:hover { color: #d4af37; padding-left: 10px; }
+
+        /* Main Content Styling */
+        .main-content { 
+            flex-grow: 1; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center;
+        }
+        
+        #live-time { 
+            font-size: 7rem; 
+            font-weight: 800; 
+            color: #fff; 
+            letter-spacing: 8px;
+            text-shadow: 0 0 30px rgba(255,255,255,0.2);
+            margin-bottom: 10px;
+        }
+        
+        .welcome-msg { 
+            font-size: 2.5rem; 
+            color: #d4af37; 
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>APEX FITNESS</h2>
+        <a href="dashboard.html" class="menu-item">Dashboard</a>
+        <a href="members.html" class="menu-item">Members</a>
+        <a href="trainers.html" class="menu-item">Trainers</a>
+        <a href="attendance.html" class="menu-item">Attendance</a>
+        <a href="payments.html" class="menu-item">Payments</a>
+        <a href="workout-plans.html" class="menu-item">Workout Plans</a>
+        <a href="diet-plans.html" class="menu-item">Diet Plans</a>
+        <div class="menu-item" onclick="logout()" style="cursor:pointer;">Logout</div>
+    </div>
+
+    <div class="main-content">
+        <div id="live-time">00:00:00</div>
+        <div class="welcome-msg" id="welcomeText">Welcome!</div>
+    </div>
+
+    <script>
+        // User name display
+        window.onload = function() {
+            const userName = localStorage.getItem('userName');
+            if (userName) {
+                document.getElementById('welcomeText').innerText = "Welcome, " + userName + "!";
+            }
+        };
+
+        // Live Clock
+        setInterval(() => {
+            const now = new Date();
+            document.getElementById('live-time').innerText = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        }, 1000);
+
+        // Logout function
+        function logout() {
+            localStorage.clear();
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

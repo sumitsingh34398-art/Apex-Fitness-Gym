@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Membership Plans | Apex Fitness</title>
+    <style>
+        /* Yahan styling hai taaki image aur cards set rahein */
+        .membership-page {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/gym-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            color: white;
+        }
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            flex-wrap: wrap; /* Taaki choti screen par niche adjust ho jaye */
+        }
+        .plan {
+            border: 2px solid #ff5722;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            background-color: rgba(26, 26, 26, 0.9); /* Halka transparent dark box */
+        }
+    </style>
+</head>
+<body class="membership-page">
+
+    <h1 style="text-align: center; color: #ff5722; margin-top: 50px;">Choose Your Plan</h1>
+    
+    <div class="pricing-container">
+        
+        <!-- Basic Plan -->
+        <div class="plan">
+            <h3>BASIC</h3>
+            <h2 style="margin: 20px 0;">$29/mo</h2>
+            <p>Access to Gym</p>
+            <a href="register.html">
+                <button style="background: #ff5722; border: none; padding: 10px 20px; color: white; margin-top: 20px; cursor: pointer; border-radius: 5px;">SELECT</button>
+            </a>
+        </div>
+
+        <!-- Standard Plan -->
+        <div class="plan">
+            <h3>STANDARD</h3>
+            <h2 style="margin: 20px 0;">$49/mo</h2>
+            <p>Gym + Training</p>
+            <a href="register.html">
+                <button style="background: #ff5722; border: none; padding: 10px 20px; color: white; margin-top: 20px; cursor: pointer; border-radius: 5px;">SELECT</button>
+            </a>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="plan">
+            <h3>PREMIUM</h3>
+            <h2 style="margin: 20px 0;">$79/mo</h2>
+            <p>All Access + Diet Plan</p>
+            <a href="register.html">
+                <button style="background: #ff5722; border: none; padding: 10px 20px; color: white; margin-top: 20px; cursor: pointer; border-radius: 5px;">SELECT</button>
+            </a>
+        </div>
+
+    </div>
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="index.html" style="padding: 12px 25px; background: #ff5722; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+            Back to Home
+        </a>
+    </div>
+
+</body>
+</html>
