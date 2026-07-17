@@ -63,8 +63,8 @@
     <div class="reg-form">
         <h2>Register Now</h2>
         
-        <!-- Form with ID for JavaScript -->
-        <form id="gymForm" action="https://formspree.io/f/xnjejjbv" method="POST">
+        <!-- API link hata di gayi hai -->
+        <form id="gymForm">
             <input type="text" name="name" placeholder="Full Name" required>
             <input type="email" name="email" placeholder="Email Address" required>
             <input type="tel" name="phone" placeholder="Phone Number" required>
@@ -74,22 +74,16 @@
 
     <script>
         document.getElementById("gymForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Default submission roko
+            event.preventDefault(); // Default submission ko rok diya
             
             const btn = document.getElementById("submitBtn");
             btn.innerText = "Submitting...";
             btn.disabled = true;
 
-            fetch(event.target.action, {
-                method: 'POST',
-                body: new FormData(event.target),
-                headers: { 'Accept': 'application/json' }
-            }).then(() => {
-                // 3 second wait aur phir redirection
-                setTimeout(function() {
-                    window.location.href = "thankyou.html";
-                }, 3000);
-            });
+            // Bina kisi API ke seedha redirect
+            setTimeout(function() {
+                window.location.href = "thankyou.html";
+            }, 1500); // 1.5 seconds ka wait
         });
     </script>
 
